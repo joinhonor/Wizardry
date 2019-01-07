@@ -24,7 +24,9 @@ Pod::Spec.new do |s|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = Wizard UI for iOS, from https://github.com/ijoshsmith/Wizardry
+  s.description  = <<-DESC
+	           See summary
+		   DESC
 
   s.homepage     = "https://github.com/joinhonor/Wizardry"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
