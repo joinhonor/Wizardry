@@ -16,20 +16,18 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "wizardry"
-  s.version      = "0.0.1"
-  s.summary      = "A short description of wizardry."
+  s.version      = "1.0"
+  s.summary      = " Wizard UI for iOS, from https://github.com/ijoshsmith/Wizardry"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = <<-DESC
-                   DESC
+  s.description  = Wizard UI for iOS, from https://github.com/ijoshsmith/Wizardry
 
-  s.homepage     = "http://EXAMPLE/wizardry"
+  s.homepage     = "https://github.com/joinhonor/Wizardry"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
-
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -38,8 +36,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
