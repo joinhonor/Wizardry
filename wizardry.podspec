@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "wizardry"
   s.version      = "1.0"
-  s.summary      = " Wizard UI for iOS, from https://github.com/ijoshsmith/Wizardry"
+  s.summary      = "Wizard UI for iOS, from https://github.com/ijoshsmith/Wizardry"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-	           See summary
+	           "Wizard UI for iOS, from https://github.com/ijoshsmith/Wizardry"
 		   DESC
 
   s.homepage     = "https://github.com/joinhonor/Wizardry"
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://EXAMPLE/wizardry.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/joinhonor/wizardry.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
