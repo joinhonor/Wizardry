@@ -39,9 +39,6 @@ class WizardViewControllerTests: XCTestCase {
         }
     }
     
-    // This arbitrary object is used as the `sender` parameter passed to actions methods.
-    private let fakeSender = NSObject()
-    
     // The wizard view controller won't navigate to the initial step until the its view is loaded.
     private func forceTransitionToInitialStep(wizardVC: WizardViewController) {
         let _ = wizardVC.view
@@ -69,10 +66,10 @@ class WizardViewControllerTests: XCTestCase {
         let wizard = wizardVC.wizard!
         XCTAssert(wizard.currentStep! == stepA)
         
-        wizardVC.handleGoToNextStep(fakeSender)
+        wizardVC.handleGoToNextStep()
         XCTAssert(wizard.currentStep! == stepB)
         
-        wizardVC.handleGoToNextStep(fakeSender)
+        wizardVC.handleGoToNextStep()
         XCTAssertNil(wizard.currentStep)
         
         waitForExpectations(timeout: 0.1, handler: nil)
@@ -99,7 +96,7 @@ class WizardViewControllerTests: XCTestCase {
         forceTransitionToInitialStep(wizardVC: wizardVC)
         
         // Going back a step from the initial step causes the wizard to be canceled.
-        wizardVC.handleGoToPreviousStep(fakeSender)
+        wizardVC.handleGoToPreviousStep()
         
         waitForExpectations(timeout: 0.1, handler: nil)
     }
@@ -121,7 +118,7 @@ class WizardViewControllerTests: XCTestCase {
         forceTransitionToInitialStep(wizardVC: wizardVC)
         
         // Simulate tapping a 'Cancel' button in the UI.
-        wizardVC.handleWizardCanceled(fakeSender)
+        wizardVC.handleWizardCanceled()
         
         waitForExpectations(timeout: 0.1, handler: nil)
     }
@@ -162,7 +159,7 @@ class WizardViewControllerTests: XCTestCase {
         forceTransitionToInitialStep(wizardVC: wizardVC)
         
         // Simulate a 'Next' button in the UI being tapped.
-        wizardVC.handleGoToNextStep(fakeSender)
+        wizardVC.handleGoToNextStep()
         
         // Make sure the wizard view controller is navigating to the correct next step.
         XCTAssert(wizardVC.navigateToNextWizardStep_callCount == 1)
@@ -184,10 +181,10 @@ class WizardViewControllerTests: XCTestCase {
         forceTransitionToInitialStep(wizardVC: wizardVC)
         
         // Simulate a 'Next' button in the UI being tapped.
-        wizardVC.handleGoToNextStep(fakeSender)
+        wizardVC.handleGoToNextStep()
         
         // Simulate a 'Back' button in the UI being tapped.
-        wizardVC.handleGoToPreviousStep(fakeSender)
+        wizardVC.handleGoToPreviousStep()
         
         // Make sure the wizard view controller is navigating to the correct previous step.
         XCTAssert(wizardVC.navigateToPreviousWizardStep_callCount == 1)
