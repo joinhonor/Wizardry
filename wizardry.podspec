@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.frameworks   = 'UIKit'
-  s.ios.deployment_target = '9.3'
+  s.ios.deployment_target = '9.0'
   s.swift_version = '4.2'
   s.author       = 'Camille Long'
   s.source       = { :git => 'https://github.com/joinhonor/wizardry.git', :tag => '1.0' }
