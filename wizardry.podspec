@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'wizardry'
-  s.version      = '1.0'
+  s.version      = '1.2'
   s.summary      = 'Wizard UI for iOS, from https://github.com/ijoshsmith/Wizardry'
   s.description  = <<-DESC
 	           'Wizard UI for iOS, from https://github.com/ijoshsmith/Wizardry'
