@@ -99,6 +99,13 @@ public extension WizardViewController {
     public func handleWizardCanceled() {
         invokeCompletionHandler(canceled: true)
     }
+
+    public func invokeCompletionHandler(canceled: Bool) {
+        if let completionHandler = completionHandler {
+            completionHandler(canceled)
+            self.completionHandler = nil
+        }
+    }
 }
 
 
@@ -125,19 +132,5 @@ extension WizardViewController: WizardDelegate {
     
     public func wizard(_ wizard: Wizard, didGoToPreviousWizardStep wizardStep: WizardStep, placement: WizardStepPlacement) {
         navigateToPrevious(wizardStep: wizardStep, placement: placement)
-    }
-}
-
-
-
-// MARK: - Private methods
-
-private extension WizardViewController {
-    
-    func invokeCompletionHandler(canceled: Bool) {
-        if let completionHandler = completionHandler {
-            completionHandler(canceled)
-            self.completionHandler = nil
-        }
     }
 }
